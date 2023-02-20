@@ -1,0 +1,11 @@
+.DS_Store
+*.local
+dist
+node_modules
+.idea/
+*.log
+cypress/downloads
+cypress/videos
+coverage
+.env
+package-lock.json

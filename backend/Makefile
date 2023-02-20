@@ -1,0 +1,27 @@
+.PHONY: start restart down build reset-docker stop insp reset update-nodejs
+
+update-nodejs:
+	npm update
+	
+build:
+	docker-compose up --build
+
+start:
+	docker-compose up -d
+
+restart:
+	docker-compose stop && docker-compose up -d
+
+stop:
+	docker-compose stop
+
+down:
+	docker-compose down
+
+reset-docker:
+	docker system prune -a --volumes
+
+insp:
+	docker inspect network
+
+# curl -H "Origin: http://localhost:5000" --head http://localhost:5173/api/data
